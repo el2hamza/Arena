@@ -7,6 +7,8 @@ import Alogo from "@/assets/A-logo.png";
 import bg from "@/assets/bg.jpg";
 import img2 from "@/assets/footrimg.png"
 
+
+
 import Chiffres from "@/components/chiffres";
 
 import card from "@/assets/img1.jpg";
@@ -91,10 +93,10 @@ export default function Home() {
   const sectionRefm = useRef(null);
 
 const brandImages = [
-    { src: newalia.src, alt: 'im1', isFirst: true ,link:'/NosMarques#alalia' },
-    { src: newpalms.src, alt: 'im2', isFirst: false ,link:'/NosMarques#palms' },
-    { src: newart.src, alt: 'im3', isFirst: false  ,link:'/NosMarques#art' },
-    { src: newwork.src, alt: 'im4', isFirst: false , link:'/NosMarques#working' }
+    { src: newalia.src, alt: 'im1', isFirst: true ,link:'/NosMarques' },
+    { src: newpalms.src, alt: 'im2', isFirst: false ,link:'/NosMarques' },
+    { src: newart.src, alt: 'im3', isFirst: false  ,link:'/NosMarques' },
+    { src: newwork.src, alt: 'im4', isFirst: false , link:'/NosMarques' }
   ];
 
 
@@ -403,22 +405,16 @@ const brandImages = [
             className="brands-swiper"
           >
             {brandImages.map((image, index) => (
-              <SwiperSlide key={index} className="flex justify-center items-center">
-                 <a 
-                href={image.link}
-                  className="w-full max-w-xs flex justify-center"
-                   >
+             <SwiperSlide key={index} className="flex justify-center items-center">
                 <div className="w-full max-w-xs flex justify-center">
-               
+                
                   <img 
                     src={image.src} 
                     alt={image.alt} 
                     className="h-auto w-full max-h-[280px] object-contain ml-6 lg:ml-[23%]" 
                     style={{width: "343px", height: "280px"}}
-                  />
-                  
+                  />                 
                 </div>
-                </a>
               </SwiperSlide>
             ))}
           </Swiper>

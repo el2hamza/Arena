@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState, useRef } from "react";
 import React from "react";
+import { Quote } from "lucide-react";
 import anis from "@/assets/MrAnis.jpeg"
 import Alogo from "@/assets/A-logo.png";
 import { useInView } from "react-intersection-observer";
@@ -62,7 +63,7 @@ export default function NotreGroupe() {
                             className="justify-center lg:w-auto xl:ml-[3%] w-[500px] lg:mr-[10%] xl:w-[480px] 2xl:ml-[5%] 2xl:w-[480px] 2xl:h-auto object-cover"
                         />
                     </div>
-                    <div className="w-full lg:w-auto xl:ml-[-3%] xl:mr-14 2xl:ml-[-5%] 2xl:mr-16 order-1 lg:order-2 mb-2 lg:mb-0 px-4 lg:px-4">
+                    <div className="w-full lg:w-auto xl:ml-[-3%] xl:mr-14 2xl:ml-[-5%] 2xl:mr-16 order-1 lg:order-2 mb-2 lg:mb-0 px-6 lg:px-4">
                         <div className="hidden lg:block">
                             <motion.p
                                 className="w-auto text-justify  xl:mt-[1%] xl:ml-[3%] tracking-[1px] text-[15px] leading-[36px] xl:text-[17px] xl:leading-[45.7px] 2xl:text-[22px] 2xl:leading-[50px] 2xl:tracking-[2px] max-w-[100%] mx-8 "
@@ -72,8 +73,8 @@ export default function NotreGroupe() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <img src={quotes.src} alt="quotes" className="inline-block mr-2 align-middle" style={{ width: '20px', height: '20px' }}  />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arena est née en 2015 avec une mission claire : repenser l'immobilier au Maroc pour en faire un levier&nbsp;
+                                <Quote className="inline-block text-[#003851] w-4 h-4 mr-2 align-middle rotate-180" />
+                                Arena est née en 2015 avec une mission claire : repenser l'immobilier au Maroc pour en faire un levier&nbsp;
                                 d'innovation, de qualité et de durabilité. En partant du logement social jusqu'aux projets les plus&nbsp;
                                 prestigieux, nous avons toujours eu à cœur de répondre aux besoins réels des clients tout en anticipant&nbsp;
                                 les enjeux de demain.<br />
@@ -83,7 +84,7 @@ export default function NotreGroupe() {
                                 espaces qui marient confort, modernité et respect de l'environnement.<br />
                                 Avec cette vision, nous continuons à bâtir des projets qui inspirent, tout en plaçant les aspirations de nos&nbsp;
                                 clients et la durabilité au cœur de nos actions.
-                                <img src={rquot.src} alt="rquot" className="inline-block ml-2 align-middle" style={{ width: '20px', height: '20px' }} />
+                                <Quote className="inline-block text-[#003851] w-4 h-4 ml-2 align-middle " />
                                 {/* Signature Section */}
                             </motion.p>
                                 <div className="flex flex-col items-end ml-[-5%] pb-[2%] w-full relative">
@@ -116,7 +117,8 @@ export default function NotreGroupe() {
                                         animate={{ height: isTextExpanded ? "auto" : "150px", overflow: "hidden" }}
                                         transition={{ duration: 0.5 }}
                                     >
-                                        " Arena est née en 2015 avec une mission claire : repenser l'immobilier au Maroc pour en faire un levier&nbsp;
+                                        <Quote className="inline-block text-[#003851] w-4 h-4 mr-2 align-middle rotate-180" />
+                                         Arena est née en 2015 avec une mission claire : repenser l'immobilier au Maroc pour en faire un levier&nbsp;
                                         d'innovation, de qualité et de durabilité. En partant du logement social jusqu'aux projets les plus&nbsp;
                                         prestigieux, nous avons toujours eu à cœur de répondre aux besoins réels des clients tout en anticipant&nbsp;
                                         les enjeux de demain.<br /><br />
@@ -125,17 +127,18 @@ export default function NotreGroupe() {
                                         architectes et designers de renom pour des résidences haut de gamme, notre objectif est de créer des&nbsp;
                                         espaces qui marient confort, modernité et respect de l'environnement.<br /><br />
                                         Avec cette vision, nous continuons à bâtir des projets qui inspirent, tout en plaçant les aspirations de nos&nbsp;
-                                        clients et la durabilité au cœur de nos actions."
+                                        clients et la durabilité au cœur de nos actions.
+                                        <Quote className="inline-block text-[#003851] w-4 h-4 mr-2 align-middle " /> 
                                     </motion.p>
 
                                     {/* Gradient fade effect at the bottom when collapsed */}
-                                    {!isTextExpanded && (
+                                   {/* {!isTextExpanded && (
                                         <div className="relative h-20 w-full pointer-events-none" style={{ 
                                             background: "linear-gradient(to top, rgba(255, 255, 255, 0.944) 0%, rgba(255,255,255,0) 100%)",
                                             clipPath: "inset(0 0 15% 0)", // Coupe les 15% du bas
                                             bottom: "25px" // Ajustez cette valeur
                                           }} />
-                                        )}
+                                        )} */}
                                 </motion.div>
                             </AnimatePresence>
 
@@ -236,14 +239,14 @@ export default function NotreGroupe() {
                             </motion.p>
 
                             {/* Gradient fade effect at the bottom when collapsed */}
-                            {!isHistoryExpanded && (
+                           {/*  {!isHistoryExpanded && (
                                 <motion.div
                                     className="h-24 bg-gradient-to-t from-white to-transparent w-full relative bottom-24"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                 />
-                            )}
+                            )}*/}
                         </motion.div>
                     </AnimatePresence>
 
